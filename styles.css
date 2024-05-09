@@ -4,10 +4,13 @@
 :root {
   /* color */
   --clr-primary-100: #b6dfff;
+  --clr-primary-300: #77c3ff;
   --clr-primary-500: #62bbff;
   --clr-primary-900: #60b8ff;
   --clr-secondary: #8a9cfe;
-  --clr-neutral-100: #ffffff;
+  --clr-neutral-100: #fff;
+  --clr-neutral-700: #444;
+  --clr-neutral-900: #000;
 
   /* font family */
   --ff-primary: "Roboto", sans-serif;
@@ -60,4 +63,42 @@ body {
   font-weight: var(--fw-regular);
   font-size: var(--fs-300);
   line-height: 1.5;
+  color: var(--clr-neutral-100);
 }
+
+a {
+  color: var(--clr-neutral-100);
+}
+
+
+/** promo banner styling **/
+.promo-banner {
+  height: 60px;
+  background-color: var(--clr-primary-300);
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo-banner-link {
+  display: flex;
+  gap: 0.125rem;
+  transition: all 250ms;
+}
+
+.promo-banner-link::after {
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
+  background: url("./assets/icons/redirect.svg") no-repeat;
+  align-self: center;
+}
+
+.promo-banner-link:hover {
+  color: var(--clr-neutral-700);
+  text-decoration: underline;
+}
+
+
