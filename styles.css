@@ -3,7 +3,7 @@
 /** css variables **/
 :root {
   /* color */
-  --clr-primary-100: #b6dfff;
+  --clr-primary-100: #addaff;
   --clr-primary-300: #77c3ff;
   --clr-primary-500: #62bbff;
   --clr-primary-900: #60b8ff;
@@ -101,4 +101,28 @@ a {
   text-decoration: underline;
 }
 
+/** background styling **/
+.background {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.layer-1 {
+  flex-grow: 3;
+  background: linear-gradient(180deg, var(--clr-primary-500) 0%, var(--clr-primary-100) 100%);
+}
+
+.layer-2 {
+  flex-grow: 1;
+  background-color: var(--clr-primary-900);
+}
+
+.layer-3 {
+  flex-grow: 2;
+  background: linear-gradient(180deg, var(--clr-primary-500) 0%, var(--clr-primary-100) 100%);
+}
 
