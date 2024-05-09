@@ -27,7 +27,7 @@
   --fs-300: 1.125rem;
   --fs-400: 1.75rem;
   --fs-500: 2rem;
-  --fs-600: 3.5rem;
+  --fs-600: 2.5rem;
   --fs-700: 6.25rem;
   --fs-900: 9.375rem;
 }
@@ -126,3 +126,71 @@ a {
   background: linear-gradient(180deg, var(--clr-primary-500) 0%, var(--clr-primary-100) 100%);
 }
 
+
+/** main header styling **/
+.main-header-container {
+  max-width: 1400px;
+  padding-inline: 16px;
+  margin: auto;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-logo {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-600);
+}
+
+.main-navbar {
+  display: none;
+}
+
+.main-navbar ul {
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.main-navbar ul li {
+  cursor: pointer;
+}
+
+.main-utility-menu {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.main-utility-menu-icon {
+  cursor: pointer;
+}
+
+
+/** breakpoint(s): >= 576px **/
+@media (min-width: 576px) {
+
+}
+
+
+/** breakpoint(m): >= 768px **/
+@media (min-width: 768px) {
+  .main-header-container {
+    padding-inline: 24px;
+  }
+}
+
+/** breakpoint(l): >= 992px **/
+@media (min-width: 992px) {
+  .main-header-container {
+    padding-inline: 32px;
+  }
+
+  .main-navbar {
+    display: block;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+}
