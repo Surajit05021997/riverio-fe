@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
 /** css variables **/
 :root {
@@ -21,6 +21,7 @@
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-bold: 700;
+  --fw-black: 900;
 
   /* font size */
   --fs-100: 0.875rem;
@@ -30,8 +31,12 @@
   --fs-400: 1.5rem;
   --fs-500: 2rem;
   --fs-600: 2.5rem;
+  --fs-650: 6rem;
   --fs-700: 6.25rem;
   --fs-900: 9.375rem;
+
+  /* max container width */
+  --mcw: 1300px;
 }
 
 
@@ -70,6 +75,7 @@ body {
   font-size: var(--fs-300);
   line-height: 1.5;
   color: var(--clr-neutral-100);
+  position: relative;
 }
 
 a {
@@ -83,7 +89,7 @@ button {
 
 /** promo banner styling **/
 .promo-banner {
-  height: 60px;
+  height: 48px;
   background-color: var(--clr-primary-300);
   display: flex;
   gap: 0.5rem;
@@ -111,6 +117,7 @@ button {
   text-decoration: underline;
 }
 
+
 /** background styling **/
 .background {
   position: absolute;
@@ -118,7 +125,7 @@ button {
   z-index: -1;
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
 }
 
 .layer-1 {
@@ -136,10 +143,41 @@ button {
   background: linear-gradient(180deg, var(--clr-primary-500) 0%, var(--clr-primary-100) 100%);
 }
 
+.circle {
+  position: absolute;
+  border: 1px solid var(--clr-neutral-100);
+  border-radius: 50%;
+}
+
+.circle-1 {
+  height: 600px;
+  width: 600px;
+  top: calc(50vh - 300px);
+  left: calc(50vw - 300px);
+}
+.circle-2 {
+  height: 400px;
+  width: 400px;
+  top: calc(50vh - 200px);
+  left: calc(50vw - 200px);
+}
+.circle-3 {
+  height: 200px;
+  width: 200px;
+  top: calc(50vh - 100px);
+  left: calc(50vw - 100px);
+}
+.circle-4 {
+  height: 50px;
+  width: 50px;
+  top: calc(50vh - 25px);
+  left: calc(50vw - 25px);
+}
+
 
 /** main header styling **/
 .main-header-container {
-  max-width: 1400px;
+  max-width: var(--mcw);
   padding-inline: 16px;
   margin: auto;
   display: flex;
@@ -149,8 +187,8 @@ button {
 }
 
 .brand-logo {
-  font-weight: var(--fw-bold);
-  font-size: var(--fs-600);
+  font-weight: var(--fw-black);
+  font-size: var(--fs-500);
 }
 
 .main-navbar {
@@ -180,7 +218,7 @@ button {
 
 /** main styling **/
 .main-container {
-  max-width: 1400px;
+  max-width: var(--mcw);
   margin: auto;
   padding-inline: 16px;
 }
@@ -191,24 +229,27 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 5rem;
-  line-height: 1.1;
-  margin-block: 100px 50px;
+  line-height: 1;
+  margin-block: 6rem 2rem;
 }
 
 .jumbo-banner-title {
   font-size: var(--fs-700);
+  width: 45rem;
 }
 
 .jumbo-banner-subtitle {
-  font-size: var(--fs-400);
+  font-size: var(--fs-350);
+  font-weight: var(--fw-medium);
+  line-height: 1.5;
+  width: 13.6rem;
 }
 
 .jumbo-banner-image {
   position: fixed;
   bottom: 0;
-  right: 0;
-  width: 70vh;
+  right: calc((100vw - var(--mcw))/2);
+  width: 800px;
   height: auto;
 }
 
@@ -219,6 +260,8 @@ button {
   flex-direction: column;
   width: 45%;
   gap: 2rem;
+  position: relative;
+  margin-block: 2rem;
 }
  
 .info-text {
@@ -227,7 +270,7 @@ button {
 
 .shop-btn {
   border: none;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
   background-color: var(--clr-secondary);
   border-radius: 10rem;
   align-self: start;
@@ -245,31 +288,39 @@ button {
   gap: 2rem;
 }
 
+.sidebar-info {
+  position: absolute;
+  writing-mode: vertical-rl;
+  height: 10rem;
+  top: 3.5rem;
+  left: -4.5rem;
+}
+
 .extra-info {
   background-color: var(--clr-primary-200);
-  padding: 10px 0;
+  padding: 2rem 1rem 1rem;
   position: fixed;
   bottom: 0;
-  width: 500px;
+  width: 29rem;
 }
 
 .info-img {
   position: absolute;
   bottom: 0;
-  left: 20px;
-  height: 230px;
+  left: 2.5rem;
+  height: 15.5rem;
   width: auto;
 }
 
 .extra-info-title {
-  font-size: var(--fs-400);
-  font-weight: var(--fw-medium);
-  margin-left: 160px;
+  font-size: var(--fs-350);
+  font-weight: var(--fw-bold);
+  margin-left: 11rem;
 }
 
 .extra-info-text {
-  margin-left: 160px;
-  margin-bottom: 32px;
+  font-size: var(--fs-100);
+  margin: 1rem 0 2rem 11rem;
 }
 
 .empty-block {
@@ -305,7 +356,7 @@ button {
 /** breakpoint(l): >= 992px **/
 @media (min-width: 992px) {
   .main-header-container {
-    padding-inline: 64px;
+    padding-inline: 6rem;
   }
 
   .main-navbar {
@@ -317,13 +368,13 @@ button {
   }
 
   .main-container {
-    padding-inline: 64px;
+    padding-inline: 6rem;
   }
 }
 
 
-/** breakpoint(l): >= 1200px **/
-@media (min-width: 1200px) {
+/** breakpoint(xl): >= 1300px **/
+@media (min-width: 1300px) {
   .main-utility-menu {
     gap: 1.5rem;
   }
