@@ -26,6 +26,29 @@
       <div class="brand-logo">
         <a href="#">RIVERIO</a>
       </div>
+      <nav class="mobile-navbar">
+        <img class="close-menu" src="./assets/icons/close.svg" alt="Close Icon">
+        <ul>
+          <li>
+            <a href="#">Best sellers</a>
+          </li>
+          <li>
+            <a href="#">Drinkware</a>
+          </li>
+          <li>
+            <a href="#">Coolers & Bags</a>
+          </li>
+          <li>
+            <a href="#">Collabs</a>
+          </li>
+          <li>
+            <a href="#">Sale</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
       <nav class="main-navbar">
         <ul>
           <li>
@@ -79,5 +102,22 @@
       </section>
     </div>
   </main>
+  <script>
+    const mobileNavbar = document.querySelector('.mobile-navbar');
+    const burgerMenu = document.querySelector('.burger-menu');
+    const closeMenu = document.querySelector('.close-menu');
+
+    burgerMenu.addEventListener('click', () => {
+      if(mobileNavbar.classList.value.includes('expanded')) {
+        mobileNavbar.classList.remove('expanded');
+        return;
+      }
+      mobileNavbar.classList.add('expanded');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      mobileNavbar.classList.remove('expanded');
+    });
+  </script>
 </body>
 </html>
