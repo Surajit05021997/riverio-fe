@@ -38,7 +38,7 @@
   --fs-900: 6.25rem;
 
   /* max container width */
-  --mcw: 1400px;
+  --mcw: 1300px;
 }
 
 
@@ -477,7 +477,7 @@ button {
 
 
 /** breakpoint: >= 1280px **/
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   /* background styling */
   .circle-1 {
     left: calc(50vw - 6vh);
@@ -490,7 +490,7 @@ button {
   .circle-3 {
     left: calc(50vw - 25vh);
   }
-  
+
   .circle-4 {
     left: calc(50vw - 35vh);
   }
@@ -538,10 +538,12 @@ button {
 
   .jumbo-banner-image {
     position: fixed;
-    padding-right: 128px;
+    padding-right: 200px;
     bottom: 0;
-    right: calc((100% - var(--mcw))/2);
-    width: 834px;
+    right: calc((97% - var(--mcw)) / 2);
+    width: 725px;
+}
+
   }
 
   /* info styling */
