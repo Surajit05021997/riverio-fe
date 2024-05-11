@@ -31,9 +31,9 @@
   --fs-400: 1.5rem;
   --fs-500: 2rem;
   --fs-600: 2.5rem;
-  --fs-650: 6rem;
-  --fs-700: 6.25rem;
-  --fs-900: 9.375rem;
+  --fs-700: 3rem;
+  --fs-800: 5.5rem;
+  --fs-900: 6.25rem;
 
   /* max container width */
   --mcw: 1300px;
@@ -89,7 +89,8 @@ button {
 
 /** promo banner styling **/
 .promo-banner {
-  height: 48px;
+  height: 8vw;
+  font-size: 3.8vw;
   background-color: var(--clr-primary-300);
   display: flex;
   gap: 0.5rem;
@@ -143,37 +144,6 @@ button {
   background: linear-gradient(180deg, var(--clr-primary-500) 0%, var(--clr-primary-100) 100%);
 }
 
-.circle {
-  position: absolute;
-  border: 1px solid var(--clr-neutral-100);
-  border-radius: 50%;
-}
-
-.circle-1 {
-  height: 600px;
-  width: 600px;
-  top: calc(50vh - 300px);
-  left: calc(50vw - 300px);
-}
-.circle-2 {
-  height: 400px;
-  width: 400px;
-  top: calc(50vh - 200px);
-  left: calc(50vw - 200px);
-}
-.circle-3 {
-  height: 200px;
-  width: 200px;
-  top: calc(50vh - 100px);
-  left: calc(50vw - 100px);
-}
-.circle-4 {
-  height: 50px;
-  width: 50px;
-  top: calc(50vh - 25px);
-  left: calc(50vw - 25px);
-}
-
 
 /** main header styling **/
 .main-header-container {
@@ -188,7 +158,7 @@ button {
 
 .brand-logo {
   font-weight: var(--fw-black);
-  font-size: var(--fs-500);
+  font-size: 10vw;
 }
 
 .main-navbar {
@@ -227,104 +197,103 @@ button {
 /** jumbo banner styling **/
 .jumbo-banner {
   display: flex;
+  gap: 1rem;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  line-height: 1;
-  margin-block: 6rem 2rem;
+  line-height: 1.2;
+  margin-block: 2rem 2rem;
+  text-align: center;
+  position: relative;
 }
 
 .jumbo-banner-title {
-  font-size: var(--fs-700);
-  width: 45rem;
+  font-size: 12.2vw;
 }
 
 .jumbo-banner-subtitle {
-  font-size: var(--fs-350);
+  font-size: 3.9vw;
   font-weight: var(--fw-medium);
   line-height: 1.5;
-  width: 13.6rem;
 }
 
 .jumbo-banner-image {
-  position: fixed;
-  bottom: 0;
-  right: calc((100vw - var(--mcw))/2);
-  width: 800px;
-  height: auto;
+  width: 100vw;
+  /* height: auto; */
+  margin-right: -2rem;
 }
 
 
 /** info styling **/
 .info {
   display: flex;
-  flex-direction: column;
-  width: 45%;
-  gap: 2rem;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 1.5rem;
   position: relative;
-  margin-block: 2rem;
+  margin-bottom: 32vw;
+  padding-bottom: 14vw;
 }
  
 .info-text {
-  font-size: var(--fs-350);
+  font-size: 3.9vw;
 }
 
 .shop-btn {
   border: none;
-  padding: 1rem 2rem;
+  padding: 0.7rem 2rem 0.7rem 1rem;;
   background-color: var(--clr-secondary);
   border-radius: 10rem;
-  align-self: start;
-  font-size: var(--fs-400);
+  font-size: 4.2vw;
   font-weight: var(--fw-medium);
+  white-space: nowrap;
   display: flex;
-  gap: 1.5rem;
+  gap: 0.5rem;
   justify-content: space-between;
   align-items: center;
   transition: all 250ms;
   cursor: pointer;
 }
 
-.shop-btn:hover {
-  gap: 2rem;
-}
-
 .sidebar-info {
   position: absolute;
   writing-mode: vertical-rl;
   height: 10rem;
-  top: 3.5rem;
-  left: -4.5rem;
+  top: -105vw;
+  left: -0.7rem;
 }
 
 .extra-info {
-  background-color: var(--clr-primary-200);
-  padding: 2rem 1rem 1rem;
+  background-color: var(--clr-primary-300);
+  padding: 1rem;
   position: fixed;
   bottom: 0;
-  width: 29rem;
+  left: 0;
+  width: 100vw;
 }
 
 .info-img {
   position: absolute;
   bottom: 0;
-  left: 2.5rem;
-  height: 15.5rem;
+  left: 1.5rem;
+  height: 45vw;
   width: auto;
 }
 
 .extra-info-title {
-  font-size: var(--fs-350);
+  font-size: 4.2vw;
   font-weight: var(--fw-bold);
-  margin-left: 11rem;
+  margin-left: 28vw;
+  line-height: 1.2;
 }
 
 .extra-info-text {
-  font-size: var(--fs-100);
-  margin: 1rem 0 2rem 11rem;
+  font-size: 3vw;
+  margin: 0.5rem 0 1rem 28vw;
 }
 
 .empty-block {
-  height: 30px;
+  height: 20px;
   width: calc(100% - 20px);
   margin: auto;
   position: absolute;
@@ -336,29 +305,121 @@ button {
 
 
 /** breakpoint(s): >= 576px **/
+/* tab and above */
 @media (min-width: 576px) {
+  /* promo banner styling */
+  .promo-banner {
+    height: 48px;
+    font-size: var(--fs-200);
+  }
 
-}
-
-
-/** breakpoint(m): >= 768px **/
-@media (min-width: 768px) {
+  /* main header styling */
   .main-header-container {
     padding-inline: 24px;
   }
 
+  .brand-logo {
+    font-size: var(--fs-500);
+  }
+
+  /* main styling */
   .main-container {
     padding-inline: 24px;
+  }
+
+  /* jumbo banner styling */
+  .jumbo-banner {
+    gap: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-block: 6rem 2rem;
+  }
+
+  .jumbo-banner-title {
+    font-size: var(--fs-800);
+    width: 45rem;
+    line-height: initial;
+  }
+
+  .jumbo-banner-subtitle {
+    font-size: var(--fs-350);
+    width: 13.6rem;
+  }
+
+  .jumbo-banner-image {
+    position: fixed;
+    bottom: 0;
+    right: calc((100vw - var(--mcw))/2);
+    height: auto;
+    width: 800px;
+  }
+
+  /* info styling */
+  .info {
+    flex-direction: column;
+    width: 45%;
+    margin-block: 2rem;
+    padding: 0;
+    gap: 2rem;
+  }
+
+  .info-text {
+    font-size: var(--fs-350);
+  }
+
+  .extra-info {
+    width: 29rem;
+    left: initial;
+    padding: 2rem 1rem 1rem;
+  }
+
+  .info-img {
+    left: 2.5rem;
+    height: 15.5rem;
+  }
+
+  .extra-info-title {
+    font-size: var(--fs-350);
+    margin-left: 11rem;
+  }
+  
+  .extra-info-text {
+    font-size: var(--fs-100);
+    margin: 1rem 0 2rem 11rem;
+  }
+
+  .shop-btn {
+    padding: 1rem 2rem;
+    font-size: var(--fs-400);
+    align-self: start;
+    gap: 1.5rem;
+    transition: all 250ms;
+  }
+
+  .sidebar-info {
+    top: 3.5rem;
+    left: -4.5rem;
+  }
+  
+  .shop-btn:hover {
+    gap: 2rem;
+  }
+
+  .empty-block {
+    height: 30px;
   }
 }
 
 
 /** breakpoint(l): >= 992px **/
 @media (min-width: 992px) {
+  /* main header styling */
   .main-header-container {
     padding-inline: 6rem;
   }
 
+  /* main header styling */
   .main-navbar {
     display: block;
   }
@@ -367,15 +428,55 @@ button {
     display: none;
   }
 
+  /* main styling */
   .main-container {
     padding-inline: 6rem;
   }
 }
 
 
-/** breakpoint(xl): >= 1300px **/
-@media (min-width: 1300px) {
+/** breakpoint(xl): >= 1200px **/
+/* desktop and above */
+@media (min-width: 1200px) {
+  /* background styling */
+  .circle {
+    position: absolute;
+    border: 1px solid var(--clr-neutral-100);
+    border-radius: 50%;
+  }
+  
+  .circle-1 {
+    height: 600px;
+    width: 600px;
+    top: calc(50vh - 300px);
+    left: calc(50vw - 300px);
+  }
+  .circle-2 {
+    height: 400px;
+    width: 400px;
+    top: calc(50vh - 200px);
+    left: calc(50vw - 200px);
+  }
+  .circle-3 {
+    height: 200px;
+    width: 200px;
+    top: calc(50vh - 100px);
+    left: calc(50vw - 100px);
+  }
+  .circle-4 {
+    height: 50px;
+    width: 50px;
+    top: calc(50vh - 25px);
+    left: calc(50vw - 25px);
+  }
+
+  /* main header styling */
   .main-utility-menu {
     gap: 1.5rem;
+  }
+
+   /* jumbo banner styling */
+  .jumbo-banner-title {
+    font-size: var(--fs-900);
   }
 }
