@@ -212,6 +212,7 @@ button {
 }
 
 .jumbo-banner-subtitle {
+  text-align: left;
   font-size: 3.9vw;
   font-weight: var(--fw-medium);
   line-height: 1.5;
@@ -409,7 +410,7 @@ button {
 
 /** breakpoint(xl): >= 1200px **/
 /* desktop and above */
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   /* background styling */
   .circle {
     position: absolute;
@@ -482,6 +483,7 @@ button {
 
   .jumbo-banner-image {
     position: fixed;
+    padding-right: 188px;
     bottom: 0;
     right: calc((100vw - var(--mcw))/2);
     width: 800px;
@@ -489,8 +491,9 @@ button {
 
   /* info styling */
   .info {
-    padding: 0;
+    margin-bottom: 0;
     width: 45%;
+    align-items: start;
   }
 
   .extra-info {
