@@ -539,7 +539,7 @@ button {
   .jumbo-banner-image {
     position: fixed;
     padding-right: 200px;
-    bottom: 0;
+    bottom: -28px;
     right: calc((97% - var(--mcw)) / 2);
     width: 725px;
 }
