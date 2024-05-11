@@ -476,7 +476,7 @@ button {
 }
 
 
-/** breakpoint: >= 1280px **/
+/** breakpoint: >= 1200px **/
 @media (min-width: 1200px) {
   /* background styling */
   .circle-1 {
@@ -503,6 +503,15 @@ button {
   .main-navbar {
     display: block;
   }
+
+  .main-navbar ul li {
+    padding: .25rem .8rem;
+    border-radius: 10rem;
+  }
+
+  .main-navbar ul li:hover {
+    background-color: var(--clr-secondary);
+  }  
 
   .burger-menu {
     display: none;
