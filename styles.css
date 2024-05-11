@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
+
 /** css variables **/
 :root {
   /* color */
@@ -108,8 +109,8 @@ button {
 .promo-banner-link::after {
   content: "";
   display: block;
-  height: 20px;
-  width: 20px;
+  height: 1.25rem;
+  width: 1.25rem;
   background: url("./assets/icons/redirect.svg") no-repeat;
   align-self: center;
 }
@@ -146,7 +147,6 @@ button {
   background: linear-gradient(180deg, var(--clr-primary-500) 0%, var(--clr-primary-100) 100%);
 }
 
-/* background styling */
 .circle {
   position: absolute;
   border: 1px solid var(--clr-neutral-200);
@@ -159,18 +159,21 @@ button {
   top: calc(58vh - 6vh);
   left: calc(100vw - 6vh);
 }
+
 .circle-2 {
   height: 32vh;
   width: 32vh;
   top: calc(58vh - 16vh);
   left: calc(100vw - 16vh);
 }
+
 .circle-3 {
   height: 50vh;
   width: 50vh;
   top: calc(58vh - 25vh);
   left: calc(100vw - 25vh);
 }
+
 .circle-4 {
   height: 70vh;
   width: 70vh;
@@ -182,7 +185,7 @@ button {
 /** main header styling **/
 .main-header-container {
   max-width: var(--mcw);
-  padding-inline: 16px;
+  padding-inline: 1rem;
   margin: auto;
   display: flex;
   gap: 1rem;
@@ -254,7 +257,7 @@ button {
 .main-container {
   max-width: var(--mcw);
   margin: auto;
-  padding-inline: 16px;
+  padding-inline: 1rem;
 }
 
 
@@ -283,7 +286,6 @@ button {
 
 .jumbo-banner-image {
   width: 100%;
-  /* height: auto; */
   margin-right: -2rem;
 }
 
@@ -355,33 +357,32 @@ button {
 
 .extra-info-text {
   font-size: 3vw;
-  margin: 0.5rem 0 1rem 28vw;
+  margin: .5rem 0 1rem 28vw;
 }
 
 .empty-block {
-  height: 20px;
-  width: calc(100% - 20px);
+  height: 1.25rem;
+  width: calc(100% - 1.25rem);
   margin: auto;
   position: absolute;
   bottom: 0;
-  left: 10px;
+  left: .625rem;
   background-color: var(--clr-primary-100);
   z-index: -1;
 }
 
 
-/** breakpoint(s): >= 576px **/
-/* tab and above */
+/** breakpoint: >= 576px **/
 @media (min-width: 576px) {
   /* promo banner styling */
   .promo-banner {
-    height: 48px;
+    height: 3rem;
     font-size: var(--fs-200);
   }
 
   /* main header styling */
   .main-header-container {
-    padding-inline: 24px;
+    padding-inline: 1.5rem;
   }
 
   .brand-logo {
@@ -394,7 +395,7 @@ button {
 
   /* main styling */
   .main-container {
-    padding-inline: 24px;
+    padding-inline: 1.5rem;
   }
 
   /* jumbo banner styling */
@@ -475,19 +476,21 @@ button {
 }
 
 
-/** breakpoint(xl): >= 1200px **/
-/* desktop and above */
+/** breakpoint: >= 1280px **/
 @media (min-width: 1280px) {
   /* background styling */
   .circle-1 {
     left: calc(50vw - 6vh);
   }
+
   .circle-2 {
     left: calc(50vw - 16vh);
   }
+
   .circle-3 {
     left: calc(50vw - 25vh);
   }
+  
   .circle-4 {
     left: calc(50vw - 35vh);
   }
@@ -559,11 +562,11 @@ button {
   .extra-info::before {
     content: "";
     display: block;
-    width: 466px;
-    height: 64px;
+    width: 29.125rem;
+    height: 4rem;
     position: absolute;
-    top: -64px;
-    left: -2px;
+    top: -4rem;
+    left: -.125rem;
     background: linear-gradient(to top, rgb(147 209 255) 0%, rgba(255, 255, 255, 0) 100%);
   }
 
@@ -587,6 +590,6 @@ button {
   }
 
   .empty-block {
-    height: 30px;
+    height: 1.875rem;
   }
 }
