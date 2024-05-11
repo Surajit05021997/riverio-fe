@@ -494,6 +494,7 @@ button {
     margin-bottom: 0;
     width: 45%;
     align-items: start;
+    padding-bottom: 18rem;
   }
 
   .extra-info {
