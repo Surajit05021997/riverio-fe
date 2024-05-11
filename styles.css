@@ -501,10 +501,10 @@ button {
 
   .jumbo-banner-image {
     position: fixed;
-    padding-right: 188px;
+    padding-right: 128px;
     bottom: 0;
     right: calc((100% - var(--mcw))/2);
-    width: 800px;
+    width: 834px;
   }
 
   /* info styling */
