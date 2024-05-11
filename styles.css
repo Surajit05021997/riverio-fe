@@ -122,6 +122,7 @@ button {
 
 /** background styling **/
 .background {
+  overflow: hidden;
   position: absolute;
   top: 0;
   z-index: -1;
@@ -143,6 +144,38 @@ button {
 .layer-3 {
   flex-grow: 2;
   background: linear-gradient(180deg, var(--clr-primary-500) 0%, var(--clr-primary-100) 100%);
+}
+
+/* background styling */
+.circle {
+  position: absolute;
+  border: 1px solid var(--clr-neutral-200);
+  border-radius: 50%;
+}
+
+.circle-1 {
+  height: 12vh;
+  width: 12vh;
+  top: calc(58vh - 6vh);
+  left: calc(100vw - 6vh);
+}
+.circle-2 {
+  height: 32vh;
+  width: 32vh;
+  top: calc(58vh - 16vh);
+  left: calc(100vw - 16vh);
+}
+.circle-3 {
+  height: 50vh;
+  width: 50vh;
+  top: calc(58vh - 25vh);
+  left: calc(100vw - 25vh);
+}
+.circle-4 {
+  height: 70vh;
+  width: 70vh;
+  top: calc(58vh - 35vh);
+  left: calc(100vw - 35vh);
 }
 
 
@@ -412,34 +445,16 @@ button {
 /* desktop and above */
 @media (min-width: 1280px) {
   /* background styling */
-  .circle {
-    position: absolute;
-    border: 1px solid var(--clr-neutral-200);
-    border-radius: 50%;
-  }
-  
   .circle-1 {
-    height: 12vh;
-        width: 12vh;
-        top: calc(58vh - 6vh);
-        left: calc(50vw - 6vh);
+    left: calc(50vw - 6vh);
   }
   .circle-2 {
-    height: 32vh;
-    width: 32vh;
-    top: calc(58vh - 16vh);
     left: calc(50vw - 16vh);
   }
   .circle-3 {
-    height: 50vh;
-    width: 50vh;
-    top: calc(58vh - 25vh);
     left: calc(50vw - 25vh);
   }
   .circle-4 {
-    height: 70vh;
-    width: 70vh;
-    top: calc(58vh - 35vh);
     left: calc(50vw - 35vh);
   }
 
@@ -509,13 +524,13 @@ button {
 
   .extra-info::before {
     content: "";
-        display: block;
-        width: 466px;
-        height: 64px;
-        position: absolute;
-        top: -64px;
-        left: -2px;
-        background: linear-gradient(to top, rgb(147 209 255) 0%, rgba(255, 255, 255, 0) 100%);
+    display: block;
+    width: 466px;
+    height: 64px;
+    position: absolute;
+    top: -64px;
+    left: -2px;
+    background: linear-gradient(to top, rgb(147 209 255) 0%, rgba(255, 255, 255, 0) 100%);
   }
 
   .info-img {
