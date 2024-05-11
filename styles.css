@@ -26,7 +26,7 @@
   --fw-black: 900;
 
   /* font size */
-  --fs-100: 0.875rem;
+  --fs-100: .875rem;
   --fs-200: 1rem;
   --fs-300: 1.125rem;
   --fs-350: 1.25rem;
@@ -95,14 +95,14 @@ button {
   font-size: 3.8vw;
   background-color: var(--clr-primary-300);
   display: flex;
-  gap: 0.5rem;
+  gap: .5rem;
   justify-content: center;
   align-items: center;
 }
 
 .promo-banner-link {
   display: flex;
-  gap: 0.125rem;
+  gap: .125rem;
   transition: all 250ms;
 }
 
@@ -307,14 +307,14 @@ button {
 
 .shop-btn {
   border: none;
-  padding: 0.7rem 2rem 0.7rem 1rem;;
+  padding: .7rem 2rem .7rem 1rem;;
   background-color: var(--clr-secondary);
   border-radius: 10rem;
   font-size: 4.2vw;
   font-weight: var(--fw-medium);
   white-space: nowrap;
   display: flex;
-  gap: 0.5rem;
+  gap: .5rem;
   justify-content: space-between;
   align-items: center;
   transition: all 250ms;
@@ -326,7 +326,7 @@ button {
   writing-mode: vertical-rl;
   height: 10rem;
   top: -105vw;
-  left: -0.7rem;
+  left: -.7rem;
 }
 
 .extra-info {
@@ -471,7 +471,7 @@ button {
   
   .extra-info-text {
     font-size: var(--fs-100);
-    margin: 0.5rem 0 1rem 9rem;
+    margin: .5rem 0 1rem 9rem;
   }
 }
 
