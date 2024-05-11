@@ -507,6 +507,7 @@ button {
   .main-navbar ul li {
     padding: .25rem .8rem;
     border-radius: 10rem;
+    transition: all 250ms;
   }
 
   .main-navbar ul li:hover {
