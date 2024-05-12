@@ -236,7 +236,7 @@ button {
 .main-navbar ul {
   padding: 0;
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .main-navbar ul li {
@@ -512,7 +512,12 @@ button {
 
   .main-navbar ul li:hover {
     background-color: var(--clr-secondary);
-  }  
+  }
+
+  .main-navbar ul li a {
+    display: flex;
+    align-items: center;
+  }
 
   .burger-menu {
     display: none;
