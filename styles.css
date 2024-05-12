@@ -505,18 +505,64 @@ button {
   }
 
   .main-navbar ul li {
+    position: relative;
+  }
+
+  .main-navbar ul li > a {
     padding: .25rem .8rem;
     border-radius: 10rem;
     transition: all 250ms;
   }
 
-  .main-navbar ul li:hover {
+  .main-navbar ul li > a:hover {
     background-color: var(--clr-secondary);
   }
 
   .main-navbar ul li a {
     display: flex;
     align-items: center;
+  }
+
+  .main-navbar ul li button {
+    display: flex;
+    align-items: center;
+    background-color: inherit;
+    font-size: inherit;
+    border: none;
+    border-radius: 10rem;
+    padding: .25rem .8rem;
+    transition: all 250ms;
+  }
+
+  .main-navbar ul li button:hover {
+    background-color: var(--clr-secondary);
+  }
+
+  .main-navbar ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 2rem;
+    width: 100%;
+    background-color: var(--clr-secondary);
+    border-radius: .5rem;
+    z-index: 1;
+  }
+
+  .main-navbar ul li:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-navbar ul li:hover .dropdown-content a {
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    border: 1px solid var(--clr-secondary);
+    transition: all 250ms;
+  }
+
+  .main-navbar ul li:hover .dropdown-content a:hover {
+    background-color: var(--clr-primary-900);
+    border: 1px solid var(--clr-neutral-200);
   }
 
   .burger-menu {
@@ -578,9 +624,9 @@ button {
     content: "";
     display: block;
     width: 29.125rem;
-    height: 4rem;
+    height: 7rem;
     position: absolute;
-    top: -4rem;
+    top: -7rem;
     left: -.125rem;
     background: linear-gradient(to top, rgb(147 209 255) 0%, rgba(255, 255, 255, 0) 100%);
   }
